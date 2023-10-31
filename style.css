@@ -1,0 +1,20 @@
+body {
+    background-color: grey;
+}
+.main{
+    position: absolute;
+    height: 34em;
+    width: 34em;
+
+    display: grid;
+    grid-template-columns: repeat(8,1fr);
+    grid-template-rows: repeat(8,1fr);
+    border:3px solid black;
+    box-shadow: 0px 0px 15px black;
+}
+
+
+.sizeOfPieces{
+    height : 4em;
+    width: 4.2em;
+}
