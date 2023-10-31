@@ -21,7 +21,7 @@ for(let x = 0; x < 64; x++){
 
     if(x == 0 || x == 7 ){
         let img = document.createElement("img");
-        img.src= "/images/blacks/elephant.png";
+        img.src= "images/blacks/elephant.png";
         img.classList.add(`elephant`);
         img.classList.add(`black`);
         img.classList.add("sizeOfPieces");
