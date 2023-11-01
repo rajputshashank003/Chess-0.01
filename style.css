@@ -1,3 +1,18 @@
+.inner-div:hover{
+    box-shadow: 0px 0px 15px black;
+
+}
+.main{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    overflow: hidden;
+}
+
+.img-extrashow {
+    box-shadow: 0px 0px 15px black;
+}
 body {
     background-color: grey;
 }

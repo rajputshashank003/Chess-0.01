@@ -137,28 +137,38 @@ function forPawnsBlacks(index){
         if(asInd >=8 && asInd <= 15 && index == asInd +8 + 8 && boxes[index].childNodes.length == 0 ){
             boxes[index].appendChild(alreadyselected);
             console.log("moved");
+            boxes[index].childNodes[0].classList.remove("img-extrashow");
             asInd = undefined;
             alreadyselected = undefined;
+            
         } else if(index == asInd + 8 && boxes[index].childNodes.length == 0){
             boxes[index].appendChild(alreadyselected);
             console.log("moved");
+            boxes[index].childNodes[0].classList.remove("img-extrashow");
             asInd = undefined;
             alreadyselected = undefined;
+            
         } else if((index == asInd + 7) || (index == asInd + 9)){
             if(boxes[index].childNodes.length != 0 && boxes[index].childNodes[0].classList[1] != boxes[asInd].childNodes[0].classList[1] ){
                 boxes[index].removeChild(boxes[index].firstElementChild);
                 boxes[index].appendChild(alreadyselected);
                 console.log("removed");
+                boxes[asInd].childNodes[0].classList.remove("img-extrashow");
                 asInd = undefined;
                 alreadyselected = undefined;
+                
             } else {
                 console.log("any piece not available to remove !");
+                boxes[asInd].childNodes[0].classList.remove("img-extrashow");
                 asInd = undefined;
                 alreadyselected = undefined;
+                
             }
         } else if(asInd != index){
+            boxes[asInd].childNodes[0].classList.remove("img-extrashow");
             asInd = undefined;
             alreadyselected = undefined;
+            
             console.log("wrong move ");
         }
     }
@@ -168,11 +178,13 @@ function forPawnsWhites(index){
     if(alreadyselected && alreadyselected.classList.contains("pawns-2")){
         if(asInd >= 48 && asInd <= 55 && index == asInd -8 - 8 && boxes[index].childNodes.length == 0 ){
             boxes[index].appendChild(alreadyselected);
+            boxes[index].childNodes[0].classList.remove("img-extrashow");
             console.log("moved");
             asInd = undefined;
             alreadyselected = undefined;
         } else if(index == asInd - 8 && boxes[index].childNodes.length == 0){
             boxes[index].appendChild(alreadyselected);
+            boxes[index].childNodes[0].classList.remove("img-extrashow");
             console.log("moved");
             asInd = undefined;
             alreadyselected = undefined;
@@ -180,15 +192,18 @@ function forPawnsWhites(index){
             if(boxes[index].childNodes.length != 0 && boxes[index].childNodes[0].classList[1] != boxes[asInd].childNodes[0].classList[1] ){
                 boxes[index].removeChild(boxes[index].firstElementChild);
                 boxes[index].appendChild(alreadyselected);
+                boxes[asInd].childNodes[0].classList.remove("img-extrashow");
                 console.log("removed");
                 asInd = undefined;
                 alreadyselected = undefined;
             } else {
                 console.log("any piece not available to remove !");
+                boxes[asInd].childNodes[0].classList.remove("img-extrashow");
                 asInd = undefined;
                 alreadyselected = undefined;
             }
         } else if(asInd != index){
+            boxes[asInd].childNodes[0].classList.remove("img-extrashow");
             asInd = undefined;
             alreadyselected = undefined;
             console.log("wrong move ");
@@ -199,13 +214,16 @@ function forPawnsWhites(index){
 function moveFunc1(index){
     if(boxes[index].childNodes.length == 0){
         boxes[index].appendChild(alreadyselected);
+        boxes[index].childNodes[0].classList.remove("img-extrashow");
     } else if(boxes[index].childNodes.length != 0 && boxes[index].childNodes[0].classList[1] != boxes[asInd].childNodes[0].classList[1]){
         boxes[index].removeChild(boxes[index].firstElementChild);
         boxes[index].appendChild(alreadyselected);
         console.log("removed");
     } else if(boxes[index].childNodes.length != 0 &&boxes[index].childNodes[0].classList[1] == boxes[asInd].childNodes[0].classList[1]){
+        boxes[asInd].childNodes[0].classList.remove("img-extrashow");
         alreadyselected = undefined;
         asInd = undefined;
+        
         console.log("reselect anything ");
     }
 }
@@ -389,8 +407,11 @@ function selectFunc(index){
     
     if(!alreadyselected && boxes[index].childNodes.length != 0){
         alreadyselected = boxes[index].childNodes[0];
+        console.log("hello");
+        
         asInd = index;
         console.log( " selected  " + alreadyselected.classList);
+        boxes[asInd].childNodes[0].classList.add("img-extrashow");
         // console.log(alreadyselected);
     } 
 }
