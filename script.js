@@ -21,7 +21,7 @@ for(let x = 0; x < 64; x++){
 
     if(x == 0 || x == 7 ){
         let img = document.createElement("img");
-        img.src= "images/blacks/elephant.png";
+        img.src= "https://raw.githubusercontent.com/rajputshashank003/Chess-0.01/main/images/blacks/elephant.png";
         img.classList.add(`elephant`);
         img.classList.add(`black`);
         img.classList.add("sizeOfPieces");
@@ -30,7 +30,7 @@ for(let x = 0; x < 64; x++){
 
     if(x == 4){
         let img = document.createElement("img");
-        img.src= "/images/blacks/king.png";
+        img.src= "https://raw.githubusercontent.com/rajputshashank003/Chess-0.01/main/images/blacks/king.png";
         img.classList.add(`king`);
         img.classList.add(`black`);
         img.classList.add("sizeOfPieces");
@@ -48,7 +48,7 @@ for(let x = 0; x < 64; x++){
 
     if(x == 2 || x == 5){
         let img = document.createElement("img");
-        img.src= "/images/blacks/camel.png";
+        img.src= "https://raw.githubusercontent.com/rajputshashank003/Chess-0.01/main/images/blacks/camel.png";
         img.classList.add(`camel`);
         img.classList.add(`black`);
         img.classList.add("sizeOfPieces");
