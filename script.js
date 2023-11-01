@@ -38,7 +38,7 @@ for(let x = 0; x < 64; x++){
     }
     if(x >= 8 && x < 16){ // used to set pawns on their place 
         let img = document.createElement("img");
-        img.src= "/images/blacks/pawn-black.png";
+        img.src= "https://raw.githubusercontent.com/rajputshashank003/Chess-0.01/main/images/blacks/pawn-black.png";
         img.classList.add(`pawns`);
         img.classList.add(`black`);
         img.classList.add("sizeOfPieces");
@@ -56,7 +56,7 @@ for(let x = 0; x < 64; x++){
     }
     if(x == 1 || x == 6){
         let img = document.createElement("img");
-        img.src= "/images/blacks/horse.png";
+        img.src= "https://raw.githubusercontent.com/rajputshashank003/Chess-0.01/main/images/blacks/horse.png";
         img.classList.add(`horse`);
         img.classList.add(`black`);
         img.classList.add("sizeOfPieces");
@@ -64,7 +64,7 @@ for(let x = 0; x < 64; x++){
     }
     if(x == 3){
         let img = document.createElement("img");
-        img.src= "/images/blacks/minister.png";
+        img.src= "https://raw.githubusercontent.com/rajputshashank003/Chess-0.01/main/images/blacks/minister.png";
         img.classList.add("minister");
         img.classList.add(`black`);
         img.classList.add("sizeOfPieces");
@@ -75,7 +75,7 @@ for(let x = 0; x < 64; x++){
 
     if(x >= 48 && x <= 55){
         let img = document.createElement("img");
-        img.src= "/images/whites/pawn.png";
+        img.src= "https://raw.githubusercontent.com/rajputshashank003/Chess-0.01/main/images/whites/pawn.png";
         img.classList.add("pawns-2");
         img.classList.add(`white`);
         img.classList.add("sizeOfPieces");
@@ -84,7 +84,7 @@ for(let x = 0; x < 64; x++){
 
     if(x == 63 || x == 56){
         let img = document.createElement("img");
-        img.src= "/images/whites/elephant.png";
+        img.src= "https://raw.githubusercontent.com/rajputshashank003/Chess-0.01/main/images/whites/elephant.png";
         img.classList.add("elephant");
         img.classList.add(`white`);
         img.classList.add("sizeOfPieces");
@@ -92,7 +92,7 @@ for(let x = 0; x < 64; x++){
     }
     if(x == 62 || x == 57){
         let img = document.createElement("img");
-        img.src= "/images/whites/horse.png";
+        img.src= "https://raw.githubusercontent.com/rajputshashank003/Chess-0.01/main/images/whites/horse.png";
         img.classList.add("horse");
         img.classList.add(`white`);
         img.classList.add("sizeOfPieces");
@@ -101,7 +101,7 @@ for(let x = 0; x < 64; x++){
 
     if(x == 61 || x == 58){
         let img = document.createElement("img");
-        img.src= "/images/whites/camel.png";
+        img.src= "https://raw.githubusercontent.com/rajputshashank003/Chess-0.01/main/images/whites/camel.png";
         img.classList.add("camel");
         img.classList.add(`white`);
         img.classList.add("sizeOfPieces");
@@ -110,7 +110,7 @@ for(let x = 0; x < 64; x++){
 
     if(x == 60){
         let img = document.createElement("img");
-        img.src= "/images/whites/minister.png";
+        img.src= "https://raw.githubusercontent.com/rajputshashank003/Chess-0.01/main/images/whites/minister.png";
         img.classList.add("minister");
         img.classList.add(`white`);
         img.classList.add("sizeOfPieces");
@@ -118,7 +118,7 @@ for(let x = 0; x < 64; x++){
     }
     if(x == 59){
         let img = document.createElement("img");
-        img.src= "/images/whites/king.png";
+        img.src= "https://raw.githubusercontent.com/rajputshashank003/Chess-0.01/main/images/whites/king.png";
         img.classList.add("king");
         img.classList.add(`white`);
         img.classList.add("sizeOfPieces");
