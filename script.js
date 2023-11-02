@@ -21,7 +21,8 @@ for(let x = 0; x < 64; x++){
 
     if(x == 0 || x == 7 ){
         let img = document.createElement("img");
-        img.src= "https://raw.githubusercontent.com/rajputshashank003/Chess-0.01/main/images/blacks/elephant.png";
+        // img.src= "https://raw.githubusercontent.com/rajputshashank003/Chess-0.01/main/images/blacks/elephant.png";
+        img.src= "elephantb.png";
         img.classList.add(`elephant`);
         img.classList.add(`black`);
         img.classList.add("sizeOfPieces");
@@ -30,7 +31,8 @@ for(let x = 0; x < 64; x++){
 
     if(x == 4){
         let img = document.createElement("img");
-        img.src= "https://raw.githubusercontent.com/rajputshashank003/Chess-0.01/main/images/blacks/king.png";
+        // img.src= "https://raw.githubusercontent.com/rajputshashank003/Chess-0.01/main/images/blacks/king.png";
+        img.src= "kingb.png";
         img.classList.add(`king`);
         img.classList.add(`black`);
         img.classList.add("sizeOfPieces");
@@ -38,7 +40,8 @@ for(let x = 0; x < 64; x++){
     }
     if(x >= 8 && x < 16){ // used to set pawns on their place 
         let img = document.createElement("img");
-        img.src= "https://raw.githubusercontent.com/rajputshashank003/Chess-0.01/main/images/blacks/pawn-black.png";
+        // img.src= "https://raw.githubusercontent.com/rajputshashank003/Chess-0.01/main/images/blacks/pawn-black.png";
+        img.src= "pawn-black.png";
         img.classList.add(`pawns`);
         img.classList.add(`black`);
         img.classList.add("sizeOfPieces");
@@ -48,7 +51,8 @@ for(let x = 0; x < 64; x++){
 
     if(x == 2 || x == 5){
         let img = document.createElement("img");
-        img.src= "https://raw.githubusercontent.com/rajputshashank003/Chess-0.01/main/images/blacks/camel.png";
+        // img.src= "https://raw.githubusercontent.com/rajputshashank003/Chess-0.01/main/images/blacks/camel.png";
+        img.src= "camelb.png";
         img.classList.add(`camel`);
         img.classList.add(`black`);
         img.classList.add("sizeOfPieces");
@@ -56,7 +60,8 @@ for(let x = 0; x < 64; x++){
     }
     if(x == 1 || x == 6){
         let img = document.createElement("img");
-        img.src= "https://raw.githubusercontent.com/rajputshashank003/Chess-0.01/main/images/blacks/horse.png";
+        // img.src= "https://raw.githubusercontent.com/rajputshashank003/Chess-0.01/main/images/blacks/horse.png";
+        img.src= "horseb.png";
         img.classList.add(`horse`);
         img.classList.add(`black`);
         img.classList.add("sizeOfPieces");
@@ -64,7 +69,8 @@ for(let x = 0; x < 64; x++){
     }
     if(x == 3){
         let img = document.createElement("img");
-        img.src= "https://raw.githubusercontent.com/rajputshashank003/Chess-0.01/main/images/blacks/minister.png";
+        // img.src= "https://raw.githubusercontent.com/rajputshashank003/Chess-0.01/main/images/blacks/minister.png";
+        img.src= "ministerb.png";
         img.classList.add("minister");
         img.classList.add(`black`);
         img.classList.add("sizeOfPieces");
@@ -75,7 +81,8 @@ for(let x = 0; x < 64; x++){
 
     if(x >= 48 && x <= 55){
         let img = document.createElement("img");
-        img.src= "https://raw.githubusercontent.com/rajputshashank003/Chess-0.01/main/images/whites/pawn.png";
+        // img.src= "https://raw.githubusercontent.com/rajputshashank003/Chess-0.01/main/images/whites/pawn.png";
+        img.src= "pawnw.png";
         img.classList.add("pawns-2");
         img.classList.add(`white`);
         img.classList.add("sizeOfPieces");
@@ -84,7 +91,8 @@ for(let x = 0; x < 64; x++){
 
     if(x == 63 || x == 56){
         let img = document.createElement("img");
-        img.src= "https://raw.githubusercontent.com/rajputshashank003/Chess-0.01/main/images/whites/elephant.png";
+        // img.src= "https://raw.githubusercontent.com/rajputshashank003/Chess-0.01/main/images/whites/elephant.png";
+        img.src= "elephantw.png";
         img.classList.add("elephant");
         img.classList.add(`white`);
         img.classList.add("sizeOfPieces");
@@ -92,7 +100,8 @@ for(let x = 0; x < 64; x++){
     }
     if(x == 62 || x == 57){
         let img = document.createElement("img");
-        img.src= "https://raw.githubusercontent.com/rajputshashank003/Chess-0.01/main/images/whites/horse.png";
+        // img.src= "https://raw.githubusercontent.com/rajputshashank003/Chess-0.01/main/images/whites/horse.png";
+        img.src= "horsew.png";
         img.classList.add("horse");
         img.classList.add(`white`);
         img.classList.add("sizeOfPieces");
@@ -101,7 +110,8 @@ for(let x = 0; x < 64; x++){
 
     if(x == 61 || x == 58){
         let img = document.createElement("img");
-        img.src= "https://raw.githubusercontent.com/rajputshashank003/Chess-0.01/main/images/whites/camel.png";
+        // img.src= "https://raw.githubusercontent.com/rajputshashank003/Chess-0.01/main/images/whites/camel.png";
+        img.src= "camelw.png";
         img.classList.add("camel");
         img.classList.add(`white`);
         img.classList.add("sizeOfPieces");
@@ -110,7 +120,8 @@ for(let x = 0; x < 64; x++){
 
     if(x == 60){
         let img = document.createElement("img");
-        img.src= "https://raw.githubusercontent.com/rajputshashank003/Chess-0.01/main/images/whites/minister.png";
+        // img.src= "https://raw.githubusercontent.com/rajputshashank003/Chess-0.01/main/images/whites/minister.png";
+        img.src= "ministerw.png";
         img.classList.add("minister");
         img.classList.add(`white`);
         img.classList.add("sizeOfPieces");
@@ -118,7 +129,8 @@ for(let x = 0; x < 64; x++){
     }
     if(x == 59){
         let img = document.createElement("img");
-        img.src= "https://raw.githubusercontent.com/rajputshashank003/Chess-0.01/main/images/whites/king.png";
+        // img.src= "https://raw.githubusercontent.com/rajputshashank003/Chess-0.01/main/images/whites/king.png";
+        img.src= "kingw.png";
         img.classList.add("king");
         img.classList.add(`white`);
         img.classList.add("sizeOfPieces");
@@ -136,14 +148,14 @@ function forPawnsBlacks(index){
     if(alreadyselected && alreadyselected.classList.contains("pawns")){
         if(asInd >=8 && asInd <= 15 && index == asInd +8 + 8 && boxes[index].childNodes.length == 0 ){
             boxes[index].appendChild(alreadyselected);
-            console.log("moved");
+            // console.log("moved");
             boxes[index].childNodes[0].classList.remove("img-extrashow");
             asInd = undefined;
             alreadyselected = undefined;
             
         } else if(index == asInd + 8 && boxes[index].childNodes.length == 0){
             boxes[index].appendChild(alreadyselected);
-            console.log("moved");
+            // console.log("moved");
             boxes[index].childNodes[0].classList.remove("img-extrashow");
             asInd = undefined;
             alreadyselected = undefined;
@@ -152,7 +164,7 @@ function forPawnsBlacks(index){
             if(boxes[index].childNodes.length != 0 && boxes[index].childNodes[0].classList[1] != boxes[asInd].childNodes[0].classList[1] ){
                 boxes[index].removeChild(boxes[index].firstElementChild);
                 boxes[index].appendChild(alreadyselected);
-                console.log("removed");
+                // console.log("removed");
                 boxes[asInd].childNodes[0].classList.remove("img-extrashow");
                 asInd = undefined;
                 alreadyselected = undefined;
@@ -169,7 +181,7 @@ function forPawnsBlacks(index){
             asInd = undefined;
             alreadyselected = undefined;
             
-            console.log("wrong move ");
+            // console.log("wrong move ");
         }
     }
 }
@@ -185,46 +197,51 @@ function forPawnsWhites(index){
         } else if(index == asInd - 8 && boxes[index].childNodes.length == 0){
             boxes[index].appendChild(alreadyselected);
             boxes[index].childNodes[0].classList.remove("img-extrashow");
-            console.log("moved");
+            // console.log("moved");
             asInd = undefined;
             alreadyselected = undefined;
         } else if((index == asInd - 7) || (index == asInd - 9)){
             if(boxes[index].childNodes.length != 0 && boxes[index].childNodes[0].classList[1] != boxes[asInd].childNodes[0].classList[1] ){
                 boxes[index].removeChild(boxes[index].firstElementChild);
                 boxes[index].appendChild(alreadyselected);
-                boxes[asInd].childNodes[0].classList.remove("img-extrashow");
-                console.log("removed");
+                boxes[index].childNodes[0].classList.remove("img-extrashow");
+                // console.log("removed");
                 asInd = undefined;
                 alreadyselected = undefined;
             } else {
-                console.log("any piece not available to remove !");
+                // console.log("any piece not available to remove !");
                 boxes[asInd].childNodes[0].classList.remove("img-extrashow");
                 asInd = undefined;
                 alreadyselected = undefined;
             }
         } else if(asInd != index){
             boxes[asInd].childNodes[0].classList.remove("img-extrashow");
+            // boxes[index].childNodes[0].classList.remove("img-extrashow");
             asInd = undefined;
             alreadyselected = undefined;
-            console.log("wrong move ");
+            // console.log("wrong move ");
         }
     }
 }
 
 function moveFunc1(index){
     if(boxes[index].childNodes.length == 0){
+        boxes[asInd].childNodes[0].classList.remove("img-extrashow");
+        // boxes[index].childNodes[0].classList.remove("img-extrashow");
         boxes[index].appendChild(alreadyselected);
-        boxes[index].childNodes[0].classList.remove("img-extrashow");
     } else if(boxes[index].childNodes.length != 0 && boxes[index].childNodes[0].classList[1] != boxes[asInd].childNodes[0].classList[1]){
+        boxes[asInd].childNodes[0].classList.remove("img-extrashow");
+        boxes[index].childNodes[0].classList.remove("img-extrashow");
         boxes[index].removeChild(boxes[index].firstElementChild);
         boxes[index].appendChild(alreadyselected);
-        console.log("removed");
+        // console.log("removed");
     } else if(boxes[index].childNodes.length != 0 &&boxes[index].childNodes[0].classList[1] == boxes[asInd].childNodes[0].classList[1]){
+        boxes[index].childNodes[0].classList.remove("img-extrashow");
         boxes[asInd].childNodes[0].classList.remove("img-extrashow");
         alreadyselected = undefined;
         asInd = undefined;
         
-        console.log("reselect anything ");
+        // console.log("reselect anything ");
     }
 }
 
@@ -254,7 +271,9 @@ function forCommmonElephant(index){
                     asInd = undefined;
                     return true;
                 }  else if(boxes[len] && boxes[len].childNodes.length == 1){
-                    console.log(boxes[len]);
+                    // console.log(boxes[len]);
+                    boxes[asInd].childNodes[0].classList.remove("img-extrashow");
+                    boxes[index].childNodes[0].classList.remove("img-extrashow");                    
                     alreadyselected = undefined;
                     asInd = undefined;
                     return false;
@@ -271,7 +290,9 @@ function forCommmonElephant(index){
                     asInd = undefined;
                     return true;
                 }  else if(boxes[len] && boxes[len].childNodes.length == 1){
-                    console.log(boxes[len]);
+                    // console.log(boxes[len]);
+                    boxes[asInd].childNodes[0].classList.remove("img-extrashow");
+                    boxes[index].childNodes[0].classList.remove("img-extrashow"); 
                     alreadyselected = undefined;
                     asInd = undefined;
                     return false;
@@ -289,7 +310,9 @@ function forCommmonElephant(index){
                 asInd = undefined;
                 return true;
             }  else if(boxes[len] && boxes[len].childNodes.length == 1){
-                console.log(boxes[len]);
+                // console.log(boxes[len]);
+                boxes[asInd].childNodes[0].classList.remove("img-extrashow");
+                boxes[index].childNodes[0].classList.remove("img-extrashow"); 
                 alreadyselected = undefined;
                 asInd = undefined;
                 return false;
@@ -308,7 +331,9 @@ function forCommmonElephant(index){
                 asInd = undefined;
                 return true;
             } else if(boxes[len] && boxes[len].childNodes.length == 1){
-                console.log(boxes[len]);
+                // console.log(boxes[len]);
+                boxes[asInd].childNodes[0].classList.remove("img-extrashow");
+                boxes[index].childNodes[0].classList.remove("img-extrashow"); 
                 alreadyselected = undefined;
                 asInd = undefined;
                 return false;
@@ -343,6 +368,7 @@ function utilCamel1(index,num){
                 asInd = undefined;
                 return true;
             } else if(boxes[newlen] && boxes[newlen].childNodes.length == 1){
+                boxes[asInd].childNodes[0].classList.remove("img-extrashow");
                 alreadyselected = undefined;
                 asInd = undefined;
                 return false;
@@ -368,6 +394,7 @@ function utilCamel2(index,num){
                 asInd = undefined;
                 return true;
             } else if(boxes[newlen] && boxes[newlen].childNodes.length == 1){
+                boxes[asInd].childNodes[0].classList.remove("img-extrashow");
                 alreadyselected = undefined;
                 asInd = undefined;
                 return false;
@@ -407,10 +434,10 @@ function selectFunc(index){
     
     if(!alreadyselected && boxes[index].childNodes.length != 0){
         alreadyselected = boxes[index].childNodes[0];
-        console.log("hello");
+        // console.log("hello");
         
         asInd = index;
-        console.log( " selected  " + alreadyselected.classList);
+        // console.log( " selected  " + alreadyselected.classList);
         boxes[asInd].childNodes[0].classList.add("img-extrashow");
         // console.log(alreadyselected);
     } 
