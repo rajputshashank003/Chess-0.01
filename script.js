@@ -31,8 +31,7 @@ for(let x = 0; x < 64; x++){
 
     if(x == 4){
         let img = document.createElement("img");
-        img.src= "https://raw.githubusercontent.com/rajputshashank003/Chess-0.01/main/kingb.png";
-        // img.src= "kingb.png";
+        img.src= "kingb.png";
         img.classList.add(`king`);
         img.classList.add(`black`);
         img.classList.add("sizeOfPieces");
