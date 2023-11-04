@@ -558,10 +558,3 @@ function addEventListenersForBoxes(index) {
 for (let i = 0; i < 64; i++) {
     addEventListenersForBoxes(i);
 }
-
-
-let restart = document.querySelector(".restart");
-restart.addEventListener("click", () => {
-    location.reload();
-});
-
