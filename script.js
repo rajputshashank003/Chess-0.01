@@ -129,62 +129,67 @@ for(let x = 0; x < 64; x++){
     main.appendChild(div);
 }
 
-let moveCount = 0;
-
 let boxes = document.querySelectorAll(".inner-div");
 let alreadyselected ; // it is an index for the div[alreadyselected] ;
 let asInd ;
+let lstCol = "white";
 
 function forPawnsBlacks(index){
-    if(alreadyselected && alreadyselected.classList.contains("pawns")){
+    if(alreadyselected && alreadyselected.classList.contains("pawns") && !alreadyselected.classList.contains(lstCol)){
         if(asInd >=8 && asInd <= 15 && index == asInd +8 + 8 && boxes[index].childNodes.length == 0 ){
+            lstCol = boxes[asInd].childNodes[0].classList[1];
             boxes[index].appendChild(alreadyselected);
             // console.log("moved");
             boxes[index].childNodes[0].classList.remove("img-extrashow");
             asInd = undefined;
             alreadyselected = undefined;
-            
         } else if(index == asInd + 8 && boxes[index].childNodes.length == 0){
+            lstCol = boxes[asInd].childNodes[0].classList[1];
             boxes[index].appendChild(alreadyselected);
             // console.log("moved");
             boxes[index].childNodes[0].classList.remove("img-extrashow");
             asInd = undefined;
             alreadyselected = undefined;
-            
+            moveCount = 1;
+
         } else if((index == asInd + 7) || (index == asInd + 9)){
             if(boxes[index].childNodes.length != 0 && boxes[index].childNodes[0].classList[1] != boxes[asInd].childNodes[0].classList[1] ){
+                lstCol = boxes[asInd].childNodes[0].classList[1];
                 boxes[index].removeChild(boxes[index].firstElementChild);
                 boxes[index].appendChild(alreadyselected);
                 // console.log("removed");
                 boxes[index].childNodes[0].classList.remove("img-extrashow");
                 asInd = undefined;
                 alreadyselected = undefined;
-                
+                moveCount = 1;
             } else {
-                console.log("any piece not available to remove !");
                 boxes[asInd].childNodes[0].classList.remove("img-extrashow");
                 asInd = undefined;
                 alreadyselected = undefined;
-                
             }
         } else if(asInd != index){
             boxes[asInd].childNodes[0].classList.remove("img-extrashow");
             asInd = undefined;
             alreadyselected = undefined;
-            
             // console.log("wrong move ");
-        }
+        } 
+    }  else if(alreadyselected && alreadyselected.classList.contains(lstCol)){
+        boxes[asInd].childNodes[0].classList.remove("img-extrashow");
+        asInd = undefined;
+        alreadyselected = undefined;
     }
 }
 
 function forPawnsWhites(index){
-    if(alreadyselected && alreadyselected.classList.contains("pawns-2")){
+    if(alreadyselected && alreadyselected.classList.contains("pawns-2") && !alreadyselected.classList.contains(lstCol)){
         if(asInd >= 48 && asInd <= 55 && index == asInd -8 - 8 && boxes[index].childNodes.length == 0 ){
+            lstCol = boxes[asInd].childNodes[0].classList[1];
             boxes[index].appendChild(alreadyselected);
             boxes[index].childNodes[0].classList.remove("img-extrashow");
             asInd = undefined;
             alreadyselected = undefined;
         } else if(index == asInd - 8 && boxes[index].childNodes.length == 0){
+            lstCol = boxes[asInd].childNodes[0].classList[1];
             boxes[index].appendChild(alreadyselected);
             boxes[index].childNodes[0].classList.remove("img-extrashow");
             // console.log("moved");
@@ -192,6 +197,8 @@ function forPawnsWhites(index){
             alreadyselected = undefined;
         } else if((index == asInd - 7) || (index == asInd - 9)){
             if(boxes[index].childNodes.length != 0 && boxes[index].childNodes[0].classList[1] != boxes[asInd].childNodes[0].classList[1] ){
+                lstCol = boxes[asInd].childNodes[0].classList[1];
+
                 boxes[index].removeChild(boxes[index].firstElementChild);
                 boxes[index].appendChild(alreadyselected);
                 boxes[index].childNodes[0].classList.remove("img-extrashow");
@@ -211,16 +218,23 @@ function forPawnsWhites(index){
             alreadyselected = undefined;
             // console.log("wrong move ");
         }
+    } else if(alreadyselected && alreadyselected.classList.contains(lstCol)){
+        boxes[asInd].childNodes[0].classList.remove("img-extrashow");
+        asInd = undefined;
+        alreadyselected = undefined;
     }
 }
 
 function moveFunc1(index){
-    if(boxes[asInd].childNodes[0].classList.contains("black") && moveCount == 0){
+    if(!alreadyselected.classList.contains(lstCol)){
         if(boxes[index].childNodes.length == 0){
+            lstCol = boxes[asInd].childNodes[0].classList[1];
             boxes[asInd].childNodes[0].classList.remove("img-extrashow");
             // boxes[index].childNodes[0].classList.remove("img-extrashow");
             boxes[index].appendChild(alreadyselected);
+
         } else if(boxes[index].childNodes.length != 0 && boxes[index].childNodes[0].classList[1] != boxes[asInd].childNodes[0].classList[1] && boxes[asInd].childNodes[0].classList.contains("black")){
+            lstCol = boxes[asInd].childNodes[0].classList[1];
             boxes[asInd].childNodes[0].classList.remove("img-extrashow");
             boxes[index].childNodes[0].classList.remove("img-extrashow");
             if(boxes[index].firstChild.classList.contains("king")){
@@ -236,47 +250,13 @@ function moveFunc1(index){
             // console.log("removed");
         } else if(boxes[index].childNodes.length != 0 &&boxes[index].childNodes[0].classList[1] == boxes[asInd].childNodes[0].classList[1]
             && boxes[asInd].childNodes[0].classList.contains("black")){
-            boxes[index].childNodes[0].classList.remove("img-extrashow");
+
             boxes[asInd].childNodes[0].classList.remove("img-extrashow");
             alreadyselected = undefined;
             asInd = undefined;
-            
             // console.log("reselect anything ");
         }
 
-        moveCount = 1;
-    } else if(boxes[asInd].childNodes[0].classList.contains("white") && moveCount == 1){
-        if(boxes[index].childNodes.length == 0){
-            boxes[asInd].childNodes[0].classList.remove("img-extrashow");
-            // boxes[index].childNodes[0].classList.remove("img-extrashow");
-            boxes[index].appendChild(alreadyselected);
-        } else if(boxes[index].childNodes.length != 0 && boxes[index].childNodes[0].classList[1] != boxes[asInd].childNodes[0].classList[1] && boxes[asInd].childNodes[0].classList.contains("black")){
-            boxes[asInd].childNodes[0].classList.remove("img-extrashow");
-            boxes[index].childNodes[0].classList.remove("img-extrashow");
-            if(boxes[index].firstChild.classList.contains("king")){
-                if(boxes[index].firstChild.classList.contains("black")){
-                    window.alert("white wins");
-                } else {
-                    window.alert("black wins");
-                }
-            }
-            boxes[index].removeChild(boxes[index].firstElementChild);
-            boxes[index].appendChild(alreadyselected);
-
-            // console.log("removed");
-        } else if(boxes[index].childNodes.length != 0 &&boxes[index].childNodes[0].classList[1] == boxes[asInd].childNodes[0].classList[1]
-            && boxes[asInd].childNodes[0].classList.contains("black")){
-            boxes[index].childNodes[0].classList.remove("img-extrashow");
-            boxes[asInd].childNodes[0].classList.remove("img-extrashow");
-            alreadyselected = undefined;
-            asInd = undefined;
-            
-            // console.log("reselect anything ");
-        }
-
-        moveCount = 0;
-    } else {
-        boxes[asInd].childNodes[0].classList.remove("img-extrashow");
     }
         
 }
@@ -369,7 +349,7 @@ function forCommmonElephant(index){
             } else if(boxes[len] && boxes[len].childNodes.length == 1){
                 // console.log(boxes[len]);
                 boxes[asInd].childNodes[0].classList.remove("img-extrashow");
-                boxes[index].childNodes[0].classList.remove("img-extrashow"); 
+                // boxes[index].childNodes[0].classList.remove("img-extrashow"); 
                 alreadyselected = undefined;
                 asInd = undefined;
                 return false;
@@ -558,3 +538,9 @@ function addEventListenersForBoxes(index) {
 for (let i = 0; i < 64; i++) {
     addEventListenersForBoxes(i);
 }
+
+let reset = document.querySelector(".reset");
+
+reset.addEventListener("click" , () => {
+    location.reload();
+} );
