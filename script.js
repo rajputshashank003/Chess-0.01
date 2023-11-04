@@ -233,7 +233,7 @@ function moveFunc1(index){
             // boxes[index].childNodes[0].classList.remove("img-extrashow");
             boxes[index].appendChild(alreadyselected);
 
-        } else if(boxes[index].childNodes.length != 0 && boxes[index].childNodes[0].classList[1] != boxes[asInd].childNodes[0].classList[1] && boxes[asInd].childNodes[0].classList.contains("black")){
+        } else if(boxes[index].childNodes.length != 0 && boxes[index].childNodes[0].classList[1] != boxes[asInd].childNodes[0].classList[1]){
             lstCol = boxes[asInd].childNodes[0].classList[1];
             boxes[asInd].childNodes[0].classList.remove("img-extrashow");
             boxes[index].childNodes[0].classList.remove("img-extrashow");
@@ -249,7 +249,7 @@ function moveFunc1(index){
 
             // console.log("removed");
         } else if(boxes[index].childNodes.length != 0 &&boxes[index].childNodes[0].classList[1] == boxes[asInd].childNodes[0].classList[1]
-            && boxes[asInd].childNodes[0].classList.contains("black")){
+           ){
 
             boxes[asInd].childNodes[0].classList.remove("img-extrashow");
             alreadyselected = undefined;
@@ -385,13 +385,13 @@ function utilCamel1(index,num){
                 return true;
             } else if(boxes[newlen] && boxes[newlen].childNodes.length == 1){
                 boxes[asInd].childNodes[0].classList.remove("img-extrashow");
-                alreadyselected = undefined;
-                asInd = undefined;
+                // alreadyselected = undefined;
+                // asInd = undefined;
                 return false;
             }
             newlen += num;
         }
-    }
+    } 
 }
 
 function utilCamel2(index,num){
@@ -411,8 +411,8 @@ function utilCamel2(index,num){
                 return true;
             } else if(boxes[newlen] && boxes[newlen].childNodes.length == 1){
                 boxes[asInd].childNodes[0].classList.remove("img-extrashow");
-                alreadyselected = undefined;
-                asInd = undefined;
+                // alreadyselected = undefined;
+                // asInd = undefined;
                 return false;
             }
             newlen -= num;
@@ -424,23 +424,22 @@ function forCamel(index){
     
     if(alreadyselected && index != asInd && alreadyselected.classList.contains("camel")){
         if(asInd < index){
-            let num = 7;
-            if(utilCamel1(index,num)){
+            if(utilCamel1(index,7) || utilCamel1(index,9)){
                 return true;
+            } else {
+                boxes[asInd].childNodes[0].classList.remove("img-extrashow");
+                asInd = undefined;
+                alreadyselected = undefined;
+                return ;
             }
-            num = 9;
-            if(utilCamel1(index,num)){
-                return true;
-            }
-
         } else if(asInd > index ) {
-            let num = 7;
-            if(utilCamel2(index,num)){
+            if(utilCamel2(index,7) || utilCamel2(index,9)){
                 return true;
-            }
-            num = 9;
-            if(utilCamel2(index,num)){
-                return true;
+            } else {
+                boxes[asInd].childNodes[0].classList.remove("img-extrashow");
+                asInd = undefined;
+                alreadyselected = undefined;
+                return ;
             }
         }
     }
@@ -476,6 +475,10 @@ function forHorse(index){
             || asInd - 1 - 8 - 8 == index || asInd + 1 + 1 + 8 == index || asInd - 1 - 1 + 8 == index 
             || asInd + 1 + 1 - 8 == index || asInd - 1 - 1 - 8 == index){
             moveFunc1(index);
+            alreadyselected = undefined;
+            asInd = undefined;
+        } else if(index != asInd){
+            boxes[asInd].childNodes[0].classList.remove("img-extrashow");
             alreadyselected = undefined;
             asInd = undefined;
         }
